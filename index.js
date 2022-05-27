@@ -28,6 +28,7 @@ async function run() {
         await client.connect();
         const toolsmanufacture = client.db('tools-manufacture').collection('tools');
         const usersmanufacture = client.db('tools-manufacture').collection('users');
+        const ordersmanufacture = client.db('tools-manufacture').collection('orders');
         console.log('toolsmanufacture');
 
       
