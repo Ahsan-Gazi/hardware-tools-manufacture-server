@@ -42,6 +42,11 @@ async function run() {
           res.send(users);
         });
 
+        app.get('/orders', async (req, res) => {
+          const orders = await ordersmanufacture.find().toArray();
+          res.send(orders);
+        });
+
     }
     finally {
 
