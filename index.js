@@ -53,6 +53,13 @@ async function run() {
           const result = await toolsmanufacture.insertOne(newtools);
           res.send(result);
         });
+
+        app.post('/orders', async (req, res) => {
+          const neworders = req.body;
+         
+          const result = await usersmanufacture.insertOne(neworders);
+          res.send(result);
+        });
     
 
     }
