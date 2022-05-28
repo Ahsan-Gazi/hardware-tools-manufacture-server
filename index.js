@@ -32,6 +32,11 @@ async function run() {
         console.log('toolsmanufacture');
 
       
+        app.get('/tools', async (req, res) => {
+          const tools = await toolsmanufacture.find().toArray();
+          res.send(tools);
+        });
+
         app.get('/user', async (req, res) => {
           const users = await usersmanufacture.find().toArray();
           res.send(users);
